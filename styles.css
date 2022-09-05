@@ -1,5 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Familjen Grotesk", sans-serif;
+  color: #fff;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* BACKGROUND-IMAGES */
+.section-a {
+  background-image: url("./assets/section-a.webp");
+}
+
+.section-b {
+  background-image: url("./assets/section-b.webp");
+}
+
+.section-c {
+  background-image: url("./assets/section-c.webp");
+}
+
+.section-d {
+  background-image: url("./assets/section-d.webp");
+}
+
+.section-e {
+  background-image: url("./assets/section-e.webp");
+}
+
+.section-f {
+  background-image: url("./assets/section-f.webp");
+}
+
+/* NAV */
+.main-header {
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  height: 6.2rem;
+}
+
+/* LOGO */
+.logo {
+  width: 13rem;
+  height: auto;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* DESKTOP MENU */
+.desktop-main-menu {
+  margin-right: 3.1em;
+}
+
+.desktop-main-menu > ul {
+  display: flex;
+}
+
+.desktop-main-menu > ul > li {
+  padding-bottom: 0.2em;
+  margin-right: 1.1em;
+  position: relative;
+}
+
+/* MENU ITEM BOTTOM BORDER */
+.desktop-main-menu > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
+}
+
+.desktop-main-menu > ul > li > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition-duration: 0.4s;
+}
+
+/* SECTIONS  */
+section {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+/* SECTION A */
+
+.section-inner {
+  max-width: 35rem;
+  position: absolute;
+  bottom: 12.5rem;
+  left: 9.3rem;
+}
+
+.section-inner > h4 {
+  margin-bottom: 0.3em;
+  font-size: 1.2rem;
+  font-weight: 300;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner > h2 {
+  margin-bottom: 0.6em;
+  font-size: 3rem;
+  font-weight: 700;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.section-inner > a {
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
+}
+
+/* BUTTON CODE */
+.btn {
+  min-width: 8.1rem;
+  padding: 1em 3.1em;
+  margin-top: 0.4em;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 2;
+  border: 0.1rem solid #fff;
+}
+
+.btn:hover > span {
+  color: #000;
+}
+
+.btn .hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  z-index: -1;
+  transform: translateY(100%);
+}
+
+.btn:hover .hover {
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 3.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeBounce 2.5s infinite;
+}
+
+/* FOOTER */
+footer {
+  padding: 3.4em 0;
+  position: relative;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer > ul > li {
+  margin-right: 2em;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 2.5;
+}
+
+footer > ul > li > a {
+  color: #fff;
+  transition: color 0.6s;
+}
+
+footer > ul > li > a:hover {
+  color: #aaa;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 9.3rem;
+    margin: auto;
+  }
+  .section-inner {
+    bottom: 4.6rem;
+    left: 1.1rem;
+  }
+
+  .section-inner > h2 {
+    font-size: 2.4rem;
+  }
+
+  footer > ul > li:first-child {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .footer > ul > li {
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* HIDE DESKTOP MENU */
+  .desktop-main-menu {
+    display: none;
+  }
 }
