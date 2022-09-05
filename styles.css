@@ -350,6 +350,14 @@ footer > ul > li > a:hover {
   background-image: url("./assets/falcon-9.webp");
 }
 
+.bg-falcon-heavy {
+  background-image: url("./assets/falcon-heavy.webp");
+}
+
+.bg-dragon {
+  background-image: url("./assets/dragon.webp");
+}
+
 .section-animate {
   animation: fadeInf9 2s ease-in-out;
 }
@@ -459,6 +467,32 @@ footer > ul > li > a:hover {
   .footer > ul > li {
     margin-right: 1em;
   }
+
+  /* FALCON 9 HTML */
+
+  .section-inner-center {
+    width: 80%;
+  }
+
+  .falcon-title {
+    font-size: 3rem;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .inner-stats {
+    margin-bottom: 1em;
+  }
+
+  .counter {
+    font-size: 3rem;
+  }
+
+  .stats-title {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -469,5 +503,9 @@ footer > ul > li > a:hover {
 
   .mobile-only {
     display: block;
+  }
+
+  .falcon-title {
+    font-size: 4.6rem;
   }
 }
